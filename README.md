@@ -29,6 +29,7 @@ Install dependencies
 ```bash
 npm install
 
+# And then run
 npm run dev
 # or
 yarn dev
