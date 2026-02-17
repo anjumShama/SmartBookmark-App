@@ -5,7 +5,7 @@ It is a simple bookmark manager where users can log in with Google and manage th
 
 ---
 
-## Features
+# Features
 
 - Google login (OAuth only)
 - Add bookmarks (title and URL)
@@ -14,8 +14,7 @@ It is a simple bookmark manager where users can log in with Google and manage th
 - Users can delete their own bookmarks
 
 ---
-
-## Tech Stack
+# Tech Stack
 
 - Next.js (App Router)
 - React
@@ -24,7 +23,7 @@ It is a simple bookmark manager where users can log in with Google and manage th
 
 ---
 
-## Installation & Running Locally
+# Installation & Running Locally
 
 Install dependencies
 ```bash
@@ -42,6 +41,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 //Problems and solutions.
+
 Realtime updates were not working across tabs 
   At first, changes were not updating in other open tabs.  
   I fixed this by enabling Supabase realtime and adding the required RLS policies.
