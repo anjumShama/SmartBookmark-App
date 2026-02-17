@@ -1,10 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark App
 
-## Getting Started
+This project was built as part of a technical assignment.  
+It is a simple bookmark manager where users can log in with Google and manage their own private bookmarks.
 
-First, run the development server:
+---
 
+## Features
+
+- Google login (OAuth only)
+- Add bookmarks (title and URL)
+- Bookmarks are private to each user
+- Real-time updates across multiple tabs
+- Users can delete their own bookmarks
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- Supabase (Authentication, Database, Realtime)
+- Tailwind CSS
+
+---
+
+## Installation & Running Locally
+
+Install dependencies
 ```bash
+npm install
+
 npm run dev
 # or
 yarn dev
@@ -16,21 +41,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+//Problems and solutions.
+Realtime updates were not working across tabs 
+  At first, changes were not updating in other open tabs.  
+  I fixed this by enabling Supabase realtime and adding the required RLS policies.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Unnecessary files increasing project size  
+  Local build and editor files were included at first.  
+  I fixed this by using a proper `.gitignore` file .
